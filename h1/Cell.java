@@ -10,7 +10,7 @@ public class Cell {
   public Cell (int indexRow, int indexCol, boolean alive){
     this.indexRow = indexRow;
     this.indexCol = indexCol;
-    this.alive = alive;
+    this.alive = false;
   }
   
   public Cell (int indexRow, int indexCol){
@@ -59,7 +59,7 @@ public class Cell {
     this.isAliveNextGen = isAliveNextGen;
   }
 
-  public void countLivingNeighbors(int [][] gridArray){
+  public void countLivingNeighbors(Cell [][] gridArray){
     int zeile = this.getIndexRow();
     int spalte = this.getIndexCol();
     int count = 0;
@@ -74,7 +74,7 @@ public class Cell {
         int nachbarspalte = spalte + s;
         
         if (nachbarzeile >= 0 && nachbarzeile < gridArray.length && nachbarspalte >= 0 && nachbarspalte < gridArray[0].length) {
-          if (gridArray[nachbarzeile][nachbarspalte] == 1) {
+          if (gridArray[nachbarzeile][nachbarspalte].isAlive()) {
             count++;
           } // end of if
         } // end of if
