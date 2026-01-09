@@ -60,7 +60,7 @@ public class Spielstein {
         } // end of if
         break;
       default:
-        System.out.println("Fehler in der matrix"); 
+         
       
     } // end of switch
     return false;
