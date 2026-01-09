@@ -65,7 +65,7 @@ public class Grid {
     }
   }
   
-  public void computeNextGen(int n){
+  public void computeGeneration(int n){
     
     for (int count = 1; count <= n; count++) {
       computeNextGen();
